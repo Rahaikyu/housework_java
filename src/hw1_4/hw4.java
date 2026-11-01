@@ -1,15 +1,15 @@
+package hw1_4;
+
 import java.util.Scanner;
 
-public class hw5 {
+public class hw4 {
     public static void main(String[] args) {
         Scanner num = new Scanner(System.in);
 
         long A = num.nextLong();
         int i = num.nextInt();
 
-        int mask = (i >= 32) ? -1 : (1 << i) - 1;
-
-        long result = A & mask;
+        long result = (i < 0 || i >= 32) ? A : (A ^ (1 << i));
 
         System.out.println(result);
     }

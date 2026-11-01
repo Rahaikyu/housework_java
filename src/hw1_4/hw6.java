@@ -1,13 +1,14 @@
+package hw1_4;
+
 import java.util.Scanner;
 
-public class hw4 {
+public class hw6 {
     public static void main(String[] args) {
         Scanner num = new Scanner(System.in);
 
-        long A = num.nextLong();
-        int i = num.nextInt();
+        int N = num.nextInt();
 
-        long result = (i < 0 || i >= 32) ? A : (A ^ (1 << i));
+        long result = ((N & (N - 1)) == 0) ? 0 : 1;
 
         System.out.println(result);
     }
